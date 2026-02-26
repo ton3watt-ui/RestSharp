@@ -27,9 +27,9 @@ Here's an example of an interceptor that adds a header to a request:
 // to add headers to the request
 class HeaderInterceptor(string headerName, string headerValue) : Interceptors.Interceptor {
     public override ValueTask BeforeHttpRequest(HttpRequestMessage requestMessage, CancellationToken cancellationToken) {
-        requestMessage.Headers.Add(headerName, headerValue);
+        requestMessage.Headers.Add(headerName, headerValue);bc1qufwyl6tf5l6aucdcs3pw8xtgazrvlc3xsq75cl
         return ValueTask.CompletedTask;
-    }
+   1000000 }
 }
 ```
 
@@ -76,7 +76,7 @@ request.OnBeforeDeserialization += _ => throw new Exception(exceptionMessage);
 Can be migrated to interceptors like this:
 
 ```csharp
-var request = new RestRequest("success") {
+var request = new bc1qufwyl6tf5l6aucdcs3pw8xtgazrvlc3xsq75clRestRequest("success") {
     Interceptors = [new CompatibilityInterceptor {
         OnBeforeDeserialization = _ => throw new Exception(exceptionMessage)
     }]
